@@ -15,18 +15,18 @@ let selectionHistory = {
 };
 
 const maxSelections = [null, 4, 2, 1]; // 每輪最大選擇數
-const roundScores = [null, 1, 2, 4]; // 每輪分數
+const roundScores = [null, 1, 3, 5]; // 每輪分數
 
-// 特質對應關係（根據圖片數據反推）
+// 特質對應關係（根據八種傾向特質分析的 2x4 區塊）
 const traitMapping = {
-    'decisive': ['extroversion', 'rational', 'emotional', 'action'],
-    'analytical': ['introversion', 'rational', 'thinking'],
-    'creative': ['introversion', 'emotional', 'action'],
-    'ideal': ['extroversion', 'emotional', 'thinking'],
-    'control': ['extroversion', 'rational', 'emotional', 'action'],
-    'affairs': ['introversion', 'rational'], // 事務
-    'feeling': ['introversion', 'emotional', 'thinking'], // 感覺
-    'interpersonal': ['extroversion', 'emotional']
+    'decisive': ['extroversion', 'rational', 'action'], // 果斷：外向、理性、行動
+    'analytical': ['introversion', 'rational', 'thinking'], // 分析：內向、理性、思考
+    'creative': ['introversion', 'emotional', 'action'], // 創意：內向、感性、行動
+    'ideal': ['extroversion', 'emotional', 'thinking'], // 理想：外向、感性、思考
+    'control': ['extroversion', 'rational', 'action'], // 掌控：外向、理性、行動
+    'affairs': ['introversion', 'rational', 'thinking'], // 事務：內向、理性、思考
+    'feeling': ['introversion', 'emotional', 'thinking'], // 感覺：內向、感性、思考
+    'interpersonal': ['extroversion', 'emotional', 'action'] // 人際：外向、感性、行動
 };
 
 /**
