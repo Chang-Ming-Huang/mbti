@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個性發展評量表分析結果</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>個性發展評量分析表</h1>
+            <p>透過三輪選擇，深入了解你的人格特質傾向</p>
+        </div>
+        
+        <div class="round-info">
+            <h3 id="round-title">第1輪：從8個選項中選出4個最重要的</h3>
+            <p id="round-instruction">請在每個題組中選擇4個選項（獲得1分）</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="question-group" data-group="1">
+                    <h3>題組 1</h3>
+                    <div class="options">
+                        <div class="option" data-trait="decisive" data-value="獨當一面">
+                            <input type="checkbox" /> 獨當一面
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="研判資訊">
+                            <input type="checkbox" /> 研判資訊
+                        </div>
+                        <div class="option" data-trait="creative" data-value="創意思考">
+                            <input type="checkbox" /> 創意思考
+                        </div>
+                        <div class="option" data-trait="ideal" data-value="規劃遠景">
+                            <input type="checkbox" /> 規劃遠景
+                        </div>
+                        <div class="option" data-trait="control" data-value="諳熟支配">
+                            <input type="checkbox" /> 諳熟支配
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="技巧就熟">
+                            <input type="checkbox" /> 技巧就熟
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="悟識他人">
+                            <input type="checkbox" /> 悟識他人
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="協助他人">
+                            <input type="checkbox" /> 協助他人
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-group" data-group="2">
+                    <h3>題組 2</h3>
+                    <div class="options">
+                        <div class="option" data-trait="decisive" data-value="明快決策">
+                            <input type="checkbox" /> 明快決策
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="研析對策">
+                            <input type="checkbox" /> 研析對策
+                        </div>
+                        <div class="option" data-trait="creative" data-value="發揮想像">
+                            <input type="checkbox" /> 發揮想像
+                        </div>
+                        <div class="option" data-trait="ideal" data-value="不受拘束">
+                            <input type="checkbox" /> 不受拘束
+                        </div>
+                        <div class="option" data-trait="action" data-value="執行計畫">
+                            <input type="checkbox" /> 執行計畫
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="井然有序">
+                            <input type="checkbox" /> 井然有序
+                        </div>
+                        <div class="option" data-trait="feeling" data-value="感性溫馨">
+                            <input type="checkbox" /> 感性溫馨
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="團隊合作">
+                            <input type="checkbox" /> 團隊合作
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-group" data-group="3">
+                    <h3>題組 3</h3>
+                    <div class="options">
+                        <div class="option" data-trait="action" data-value="實事求是">
+                            <input type="checkbox" /> 實事求是
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="邏輯分析">
+                            <input type="checkbox" /> 邏輯分析
+                        </div>
+                        <div class="option" data-trait="creative" data-value="創作研發">
+                            <input type="checkbox" /> 創作研發
+                        </div>
+                        <div class="option" data-trait="ideal" data-value="彈性多元">
+                            <input type="checkbox" /> 彈性多元
+                        </div>
+                        <div class="option" data-trait="action" data-value="現況掌控">
+                            <input type="checkbox" /> 現況掌控
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="資訊蒐整">
+                            <input type="checkbox" /> 資訊蒐整
+                        </div>
+                        <div class="option" data-trait="feeling" data-value="同理情懷">
+                            <input type="checkbox" /> 同理情懷
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="人際經營">
+                            <input type="checkbox" /> 人際經營
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-group" data-group="4">
+                    <h3>題組 4</h3>
+                    <div class="options">
+                        <div class="option" data-trait="decisive" data-value="重視成效">
+                            <input type="checkbox" /> 重視成效
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="作理思考">
+                            <input type="checkbox" /> 作理思考
+                        </div>
+                        <div class="option" data-trait="creative" data-value="突破創新">
+                            <input type="checkbox" /> 突破創新
+                        </div>
+                        <div class="option" data-trait="ideal" data-value="推銷想法">
+                            <input type="checkbox" /> 推銷想法
+                        </div>
+                        <div class="option" data-trait="action" data-value="建立程序">
+                            <input type="checkbox" /> 建立程序
+                        </div>
+                        <div class="option" data-trait="affairs" data-value="行政處理">
+                            <input type="checkbox" /> 行政處理
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="支持他人">
+                            <input type="checkbox" /> 支持他人
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="終身人群">
+                            <input type="checkbox" /> 終身人群
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-group" data-group="5">
+                    <h3>題組 5</h3>
+                    <div class="options">
+                        <div class="option" data-trait="action" data-value="影響他人">
+                            <input type="checkbox" /> 影響他人
+                        </div>
+                        <div class="option" data-trait="analytical" data-value="追根究底">
+                            <input type="checkbox" /> 追根究底
+                        </div>
+                        <div class="option" data-trait="creative" data-value="實驗嘗試">
+                            <input type="checkbox" /> 實驗嘗試
+                        </div>
+                        <div class="option" data-trait="ideal" data-value="開發市場">
+                            <input type="checkbox" /> 開發市場
+                        </div>
+                        <div class="option" data-trait="action" data-value="組織管理">
+                            <input type="checkbox" /> 組織管理
+                        </div>
+                        <div class="option" data-trait="affairs" data-value="細部處理">
+                            <input type="checkbox" /> 細部處理
+                        </div>
+                        <div class="option" data-trait="feeling" data-value="營造氣氛">
+                            <input type="checkbox" /> 營造氣氛
+                        </div>
+                        <div class="option" data-trait="interpersonal" data-value="保體群眾">
+                            <input type="checkbox" /> 保體群眾
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-buttons">
+                    <button class="btn" id="nextRound">下一輪</button>
+                    <button class="btn" id="resetTest">重新開始</button>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="results-section">
+                    <h3>八種傾向特質分析</h3>
+                    <table class="result-table">
+                        <tr>
+                            <th>果斷</th>
+                            <th>分析</th>
+                            <th>創意</th>
+                            <th>理想</th>
+                        </tr>
+                        <tr>
+                            <td id="decisive-score">0</td>
+                            <td id="analytical-score">0</td>
+                            <td id="creative-score">0</td>
+                            <td id="ideal-score">0</td>
+                        </tr>
+                        <tr>
+                            <th>掌控</th>
+                            <th>事務</th>
+                            <th>感覺</th>
+                            <th>人際</th>
+                        </tr>
+                        <tr>
+                            <td id="control-score">0</td>
+                            <td id="affairs-score">0</td>
+                            <td id="feeling-score">0</td>
+                            <td id="interpersonal-score">0</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>三種傾向特質分析</h3>
+                    <table class="result-table">
+                        <tr>
+                            <th>評估向度</th>
+                            <th>外向</th>
+                            <th>內向</th>
+                            <th>理性</th>
+                            <th>感性</th>
+                            <th>思考</th>
+                            <th>行動</th>
+                        </tr>
+                        <tr>
+                            <td><strong>得分</strong></td>
+                            <td id="extroversion-score">0</td>
+                            <td id="introversion-score">0</td>
+                            <td id="rational-score">0</td>
+                            <td id="emotional-score">0</td>
+                            <td id="thinking-score">0</td>
+                            <td id="action-score">0</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>視覺化對比分析</h3>
+                    <div class="comparison-bars">
+                        <div class="comparison-item">
+                            <div class="comparison-label">
+                                <span>外向 <span id="ext-percent">0%</span></span>
+                                <span>能量來源</span>
+                                <span><span id="int-percent">0%</span> 內向</span>
+                            </div>
+                            <div class="comparison-bar">
+                                <div class="bar-left" id="ext-bar" style="width: 0%">外向</div>
+                                <div class="bar-right" id="int-bar" style="width: 0%">內向</div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-item">
+                            <div class="comparison-label">
+                                <span>理性 <span id="rat-percent">0%</span></span>
+                                <span>決策方式</span>
+                                <span><span id="emo-percent">0%</span> 感性</span>
+                            </div>
+                            <div class="comparison-bar">
+                                <div class="bar-left" id="rat-bar" style="width: 0%">理性</div>
+                                <div class="bar-right" id="emo-bar" style="width: 0%">感性</div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-item">
+                            <div class="comparison-label">
+                                <span>思考 <span id="thi-percent">0%</span></span>
+                                <span>行為模式</span>
+                                <span><span id="act-percent">0%</span> 行動</span>
+                            </div>
+                            <div class="comparison-bar">
+                                <div class="bar-left" id="thi-bar" style="width: 0%">思考</div>
+                                <div class="bar-right" id="act-bar" style="width: 0%">行動</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scoring-info">
+                    <h4>評分規則說明</h4>
+                    <p><strong>第1輪</strong>（8選4）：每個被選中的選項得 <strong>1 分</strong></p>
+                    <p><strong>第2輪</strong>（4選2）：每個被選中的選項得 <strong>2 分</strong></p>
+                    <p><strong>第3輪</strong>（2選1）：被選中的選項得 <strong>4 分</strong></p>
+                    
+                    <h4>特質對應關係（根據圖片數據分析，僅供參考，待確認）</h4>
+                    <p><strong>外向</strong> = 果斷 + 掌控 + 人際 + 理想</p>
+                    <p><strong>內向</strong> = 分析 + 事務 + 感覺 + 創意</p>
+                    <p><strong>理性</strong> = 分析 + 事務 + 果斷 + 掌控</p>
+                    <p><strong>感性</strong> = 理想 + 創意 + 感覺 + 人際 + 果斷 + 掌控</p>
+                    <p><strong>思考</strong> = 分析 + 理想 + 感覺</p>
+                    <p><strong>行動</strong> = 果斷 + 創意 + 掌控</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

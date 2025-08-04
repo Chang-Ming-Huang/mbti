@@ -1,0 +1,531 @@
+/* MBTI 測試系統 - 樣式檔案 */
+
+/* 基礎樣式 */
+body {
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    color: #18191b;
+}
+
+/* 主容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(24, 25, 27, 0.1);
+    border: 1px solid #dee2e6;
+}
+
+/* 標題區域 */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #18191b;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.header p {
+    color: #6c757d;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 輪次資訊區塊 */
+.round-info {
+    background: linear-gradient(135deg, #415c99 0%, #5470b8 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(65, 92, 153, 0.2);
+}
+
+.round-info h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.round-info p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* 主要內容區域 */
+.main-content {
+    display: flex;
+    gap: 30px;
+}
+
+.left-panel {
+    flex: 1;
+}
+
+.right-panel {
+    flex: 1;
+}
+
+/* 題組樣式 */
+.question-group {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(24, 25, 27, 0.05);
+}
+
+.question-group h3 {
+    color: #18191b;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #415c99;
+}
+
+/* 選項網格 */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+/* 選項樣式 */
+.option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.option:hover {
+    background-color: #e9ecef;
+    border-color: #415c99;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(65, 92, 153, 0.15);
+}
+
+.option input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* 選項選中狀態 */
+.option.selected-round1 {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border-color: #ffc107;
+    color: #856404;
+}
+
+.option.selected-round2 {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border-color: #28a745;
+    color: #155724;
+}
+
+.option.selected-round3 {
+    background: linear-gradient(135deg, #415c99, #5470b8);
+    border-color: #415c99;
+    color: white;
+    font-weight: 600;
+}
+
+/* 控制按鈕 */
+.control-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 28px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:first-child {
+    background: linear-gradient(135deg, #415c99, #5470b8);
+    color: white;
+}
+
+.btn:last-child {
+    background: #18191b;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(24, 25, 27, 0.2);
+}
+
+.btn:disabled {
+    background-color: #dee2e6;
+    color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 結果區域 */
+.results-section {
+    margin-top: 20px;
+}
+
+.results-section h3 {
+    color: #18191b;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #415c99;
+}
+
+/* 結果表格 */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(24, 25, 27, 0.05);
+}
+
+.result-table th,
+.result-table td {
+    border: 2px solid #dee2e6;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.result-table th {
+    background: linear-gradient(135deg, #18191b, #2a2b2d);
+    color: white;
+    font-size: 16px;
+}
+
+.result-table td {
+    font-size: 18px;
+    background-color: white;
+    color: #18191b;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    border: 2px solid #dee2e6 !important;
+}
+
+.result-table td.updated {
+    background-color: #d4edda !important;
+    transform: scale(1.05);
+    border: 2px solid #28a745 !important;
+}
+
+/* 視覺化對比分析 */
+.comparison-bars {
+    margin: 20px 0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.comparison-item {
+    margin-bottom: 20px;
+}
+
+.comparison-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.comparison-label span:first-child,
+.comparison-label span:last-child {
+    min-width: 80px;
+}
+
+.comparison-label span:nth-child(2) {
+    font-size: 16px;
+    color: #666;
+}
+
+.comparison-bar {
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    display: flex;
+}
+
+.bar-left,
+.bar-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+.bar-left {
+    background: linear-gradient(90deg, #18191b, #2a2b2d);
+    border-radius: 20px 0 0 20px;
+}
+
+.bar-right {
+    background: linear-gradient(90deg, #415c99, #5470b8);
+    border-radius: 0 20px 20px 0;
+}
+
+/* 當左側是 100% 時，右側完全隱藏，左側保持完整圓角 */
+.bar-left[style*="width: 100%"] {
+    border-radius: 20px;
+}
+
+/* 當右側是 100% 時，左側完全隱藏，右側保持完整圓角 */
+.bar-right[style*="width: 100%"] {
+    border-radius: 20px;
+}
+
+/* 當進度條寬度小於 15% 時隱藏文字 */
+.bar-left[style*="width: 0%"],
+.bar-right[style*="width: 0%"],
+.bar-left[style*="width: 1%"],
+.bar-right[style*="width: 1%"],
+.bar-left[style*="width: 2%"],
+.bar-right[style*="width: 2%"],
+.bar-left[style*="width: 3%"],
+.bar-right[style*="width: 3%"],
+.bar-left[style*="width: 4%"],
+.bar-right[style*="width: 4%"],
+.bar-left[style*="width: 5%"],
+.bar-right[style*="width: 5%"],
+.bar-left[style*="width: 6%"],
+.bar-right[style*="width: 6%"],
+.bar-left[style*="width: 7%"],
+.bar-right[style*="width: 7%"],
+.bar-left[style*="width: 8%"],
+.bar-right[style*="width: 8%"],
+.bar-left[style*="width: 9%"],
+.bar-right[style*="width: 9%"],
+.bar-left[style*="width: 10%"],
+.bar-right[style*="width: 10%"],
+.bar-left[style*="width: 11%"],
+.bar-right[style*="width: 11%"],
+.bar-left[style*="width: 12%"],
+.bar-right[style*="width: 12%"],
+.bar-left[style*="width: 13%"],
+.bar-right[style*="width: 13%"],
+.bar-left[style*="width: 14%"],
+.bar-right[style*="width: 14%"] {
+    font-size: 0;
+}
+
+/* 當寬度為 0% 時完全隱藏進度條 */
+.bar-left[style*="width: 0%"],
+.bar-right[style*="width: 0%"] {
+    display: none;
+}
+
+.bar-left:empty,
+.bar-right:empty {
+    display: none;
+}
+
+/* 評分說明區域 */
+.scoring-info {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    border: 1px solid #dee2e6;
+}
+
+.scoring-info h4 {
+    color: #18191b;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.scoring-info p {
+    color: #495057;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* 題組內選擇歷程樣式 - 卡片式時間軸設計 */
+.group-selection-history {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #415c99;
+}
+
+.group-selection-history h4 {
+    color: #415c99;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-round {
+    position: relative;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 18px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.timeline-round:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.round-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.round-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    min-width: 70px;
+    text-align: center;
+}
+
+.round-badge.badge-1 {
+    background: linear-gradient(135deg, #ffc107, #ffb300);
+}
+
+.round-badge.badge-2 {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.round-badge.badge-3 {
+    background: linear-gradient(135deg, #415c99, #5470b8);
+}
+
+.round-score {
+    font-size: 13px;
+    color: #666;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.choices-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.choice-item {
+    background: white;
+    border: 2px solid #dee2e6;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.choice-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.choice-item.choice-1 {
+    border-color: #ffc107;
+    background: #fff9e6;
+}
+
+.choice-item.choice-2 {
+    border-color: #28a745;
+    background: #f0f9f0;
+}
+
+.choice-item.choice-3 {
+    border-color: #415c99;
+    background: #f0f4ff;
+}
+
+.no-choice {
+    color: #999;
+    font-style: italic;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.completion-message-inline {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #415c99, #5470b8);
+    color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.completion-message-inline h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.completion-message-inline p {
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.5;
+}
