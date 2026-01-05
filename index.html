@@ -13,6 +13,24 @@
             <p>透過三輪選擇，深入了解你的人格特質傾向</p>
         </div>
         
+        <!-- 進度指示器 -->
+        <div class="progress-indicator">
+            <div class="progress-step active" data-step="1">
+                <div class="step-circle">1</div>
+                <div class="step-label">第一輪</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="2">
+                <div class="step-circle">2</div>
+                <div class="step-label">第二輪</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="3">
+                <div class="step-circle">3</div>
+                <div class="step-label">第三輪</div>
+            </div>
+        </div>
+
         <div class="round-info">
             <h3 id="round-title">第1輪：從8個選項中選出4個最重要的</h3>
             <p id="round-instruction">請在每個題組中選擇4個選項（獲得1分）</p>
@@ -21,7 +39,12 @@
         <div class="main-content">
             <div class="left-panel">
                 <div class="question-group" data-group="1">
-                    <h3>題組 1</h3>
+                    <div class="group-header">
+                        <h3>題組 1</h3>
+                        <div class="selection-counter">
+                            已選擇 <span class="current-count">0</span> / <span class="total-count">4</span>
+                        </div>
+                    </div>
                     <div class="options">
                         <div class="option" data-trait="decisive" data-value="獨當一面">
                             <input type="checkbox" /> 獨當一面
@@ -51,7 +74,12 @@
                 </div>
                 
                 <div class="question-group" data-group="2">
-                    <h3>題組 2</h3>
+                    <div class="group-header">
+                        <h3>題組 2</h3>
+                        <div class="selection-counter">
+                            已選擇 <span class="current-count">0</span> / <span class="total-count">4</span>
+                        </div>
+                    </div>
                     <div class="options">
                         <div class="option" data-trait="decisive" data-value="明快決策">
                             <input type="checkbox" /> 明快決策
@@ -81,7 +109,12 @@
                 </div>
                 
                 <div class="question-group" data-group="3">
-                    <h3>題組 3</h3>
+                    <div class="group-header">
+                        <h3>題組 3</h3>
+                        <div class="selection-counter">
+                            已選擇 <span class="current-count">0</span> / <span class="total-count">4</span>
+                        </div>
+                    </div>
                     <div class="options">
                         <div class="option" data-trait="decisive" data-value="實事求是">
                             <input type="checkbox" /> 實事求是
@@ -111,7 +144,12 @@
                 </div>
                 
                 <div class="question-group" data-group="4">
-                    <h3>題組 4</h3>
+                    <div class="group-header">
+                        <h3>題組 4</h3>
+                        <div class="selection-counter">
+                            已選擇 <span class="current-count">0</span> / <span class="total-count">4</span>
+                        </div>
+                    </div>
                     <div class="options">
                         <div class="option" data-trait="decisive" data-value="重視成效">
                             <input type="checkbox" /> 重視成效
@@ -141,7 +179,12 @@
                 </div>
                 
                 <div class="question-group" data-group="5">
-                    <h3>題組 5</h3>
+                    <div class="group-header">
+                        <h3>題組 5</h3>
+                        <div class="selection-counter">
+                            已選擇 <span class="current-count">0</span> / <span class="total-count">4</span>
+                        </div>
+                    </div>
                     <div class="options">
                         <div class="option" data-trait="decisive" data-value="影響他人">
                             <input type="checkbox" /> 影響他人
