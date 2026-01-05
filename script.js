@@ -36,7 +36,13 @@ function updateRoundInfo() {
     const roundTitle = document.getElementById('round-title');
     const roundInstruction = document.getElementById('round-instruction');
     const nextButton = document.getElementById('nextRound');
-    
+
+    // 更新進度指示器
+    updateProgressIndicator();
+
+    // 更新所有計數器
+    updateAllCounters();
+
     switch(currentRound) {
         case 1:
             roundTitle.textContent = '第1輪：從8個選項中選出4個最重要的';
@@ -57,6 +63,27 @@ function updateRoundInfo() {
 }
 
 /**
+ * 更新進度指示器
+ */
+function updateProgressIndicator() {
+    const steps = document.querySelectorAll('.progress-step');
+
+    steps.forEach((step, index) => {
+        const stepNumber = index + 1;
+
+        // 移除所有狀態
+        step.classList.remove('active', 'completed');
+
+        // 設定當前狀態
+        if (stepNumber < currentRound) {
+            step.classList.add('completed');
+        } else if (stepNumber === currentRound) {
+            step.classList.add('active');
+        }
+    });
+}
+
+/**
  * 處理選項點擊事件
  * @param {HTMLElement} option - 被點擊的選項元素
  * @param {string} group - 題組編號
@@ -64,20 +91,20 @@ function updateRoundInfo() {
 function handleOptionClick(option, group) {
     const checkbox = option.querySelector('input[type="checkbox"]');
     const groupSelections = document.querySelectorAll(`[data-group="${group}"] .option input:checked`);
-    
+
     if (!checkbox.checked && groupSelections.length >= maxSelections[currentRound]) {
         alert(`每個題組最多只能選擇 ${maxSelections[currentRound]} 個選項`);
         return;
     }
-    
+
     checkbox.checked = !checkbox.checked;
-    
+
     // 更新視覺樣式
     option.classList.remove('selected-round1', 'selected-round2', 'selected-round3');
     if (checkbox.checked) {
         option.classList.add(`selected-round${currentRound}`);
         selectedOptions[currentRound].add(option);
-        
+
         // 記錄選擇歷史
         const optionData = {
             group: group,
@@ -89,15 +116,56 @@ function handleOptionClick(option, group) {
         }
     } else {
         selectedOptions[currentRound].delete(option);
-        
+
         // 從選擇歷史中移除
         selectionHistory[currentRound] = selectionHistory[currentRound].filter(
             item => !(item.group === group && item.text === option.dataset.value)
         );
     }
-    
+
+    // 更新選擇計數器
+    updateSelectionCounter(group);
+
     // 每次點擊都觸發計算結果
     calculateResults();
+}
+
+/**
+ * 更新選擇計數器
+ * @param {string} group - 題組編號
+ */
+function updateSelectionCounter(group) {
+    const questionGroup = document.querySelector(`[data-group="${group}"]`);
+    if (!questionGroup) return;
+
+    const counter = questionGroup.querySelector('.selection-counter');
+    if (!counter) return;
+
+    const currentCount = questionGroup.querySelectorAll('.option input:checked').length;
+    const totalCount = maxSelections[currentRound];
+
+    const currentSpan = counter.querySelector('.current-count');
+    const totalSpan = counter.querySelector('.total-count');
+
+    if (currentSpan) currentSpan.textContent = currentCount;
+    if (totalSpan) totalSpan.textContent = totalCount;
+
+    // 更新計數器狀態
+    counter.classList.remove('complete', 'warning');
+    if (currentCount === totalCount) {
+        counter.classList.add('complete');
+    } else if (currentCount > totalCount) {
+        counter.classList.add('warning');
+    }
+}
+
+/**
+ * 更新所有題組的計數器
+ */
+function updateAllCounters() {
+    for (let group = 1; group <= 5; group++) {
+        updateSelectionCounter(group.toString());
+    }
 }
 
 /**
